@@ -2,7 +2,7 @@
 
 provider "aws" {
   region  = "ap-southeast-1"
-  version = "~> 1.30.0"
+  version = "~> 2.7"
 }
 
 resource "random_id" "this" {
