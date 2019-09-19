@@ -1,5 +1,10 @@
 # Random ID Generator
 
+provider "aws" {
+  region  = "ap-southeast-1"
+  version = "~> 1.30.0"
+}
+
 resource "random_id" "this" {
   count = "${lower(var.target_scope) == "regional" || lower(var.target_scope) == "global" ? "1" : "0"}"
 
